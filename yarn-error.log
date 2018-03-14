@@ -1,0 +1,49 @@
+Arguments: 
+  /usr/local/bin/node /Users/alocke/.yarn/bin/yarn.js build
+
+PATH: 
+  /Users/alocke/.yarn/bin:/Users/alocke/.config/yarn/global/node_modules/.bin:~/.npm-global/bin:/Users/alocke/.rbenv/shims:/Applications/Postgres.app/Contents/Versions/10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
+Yarn version: 
+  1.5.1
+
+Node version: 
+  9.5.0
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "create-repack-app",
+    "version": "1.0.0",
+    "scripts": {
+      "build": "cd client && npm install --only=dev && npm install && npm run build && cd ..",
+      "deploy": "cp -a client/build/. public/",
+      "heroku-postbuild": "npm run build && npm run deploy && echo 'Client Built'"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: Command failed.
+  Exit code: 1
+  Command: sh
+  Arguments: -c cd client && npm install --only=dev && npm install && npm run build && cd ..
+  Directory: /Users/alocke/Desktop/dpl/week6/examples/app_store
+  Output:
+  
+      at ProcessTermError.MessageError (/Users/alocke/.yarn/lib/cli.js:186:110)
+      at new ProcessTermError (/Users/alocke/.yarn/lib/cli.js:226:113)
+      at ChildProcess.<anonymous> (/Users/alocke/.yarn/lib/cli.js:30281:17)
+      at ChildProcess.emit (events.js:160:13)
+      at maybeClose (internal/child_process.js:943:16)
+      at Process.ChildProcess._handle.onexit (internal/child_process.js:220:5)
