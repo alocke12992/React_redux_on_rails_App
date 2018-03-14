@@ -1,20 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Header } from 'semantic-ui-react';
-import image from './background.jpg';
-
-var styles = {
-  width: '100%',
-  height: '1200px',
-  backgroundImage: 'url(' + image + ')',
-};
+import { Header, Container } from 'semantic-ui-react';
 
 const Home = () => (
-  <section style={styles}>
-    <Header textAlign="center" as="h3">
-      Welcome To The <Link to="/apps">App Store</Link>
-    </Header>
-  </section>
+  <Header textAlign="center" as="h3">
+    Welcome To The <Link to="/apps">App Store</Link>
+  </Header>
 );
 
 export default Home;

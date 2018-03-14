@@ -4,13 +4,24 @@ import Home from './comps/Home';
 import Apps from './comps/Apps';
 import AppView from './comps/AppView';
 import NoMatch from './comps/NoMatch';
+import FetchApps from './comps/FetchApps';
+import image from './background.jpg';
+
+const styles = {
+  width: '100%',
+  height: '1200px',
+  background: 'url(' + image + ')',
+  backgroundSize: 'cover',
+};
 
 const App = () => (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/apps" component={Apps} />
-    <Route exact path="/apps/:id" component={AppView} />
-    <Route component={NoMatch} />
-  </Switch>
+  <section style={ styles }>
+    <Switch>
+      <Route exact path="/" component={ Home } />
+      <Route path="/apps" component={ FetchApps } />
+      <Route component={ NoMatch } />
+    </Switch>
+  </section>
 );
+
 export default App;
